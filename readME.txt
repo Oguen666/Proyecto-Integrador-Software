@@ -29,8 +29,23 @@ sum67([1, 1, 6, 7, 2]) → 4
 
 Se iteró sobre la lista de números usando un ciclo `for` y una variable booleana (`ignore`) como bandera. Al encontrar un `6`, la bandera se cambia a `True` para ignorar la suma de los valores siguientes. Si se encuentra un `7` mientras la bandera está activa, esta se cambia a `False` para reanudar la suma. Los números se suman al total únicamente cuando la bandera es `False`.
 
----
+--- 
 
+# Reto Rigo:
+
+We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) and big bars (5 kilos each).
+Return the number of small bars to use, assuming we always use big bars before small bars.
+Return -1 if it can't be done.
+
+make_chocolate(4, 1, 9) → 4
+make_chocolate(4, 1, 10) → -1
+make_chocolate(4, 1, 7) → 2
+
+### Solución
+
+Primero sacamos la mayor cantidad de barras grandes que podemos usar sin pasarnos del objetivo (goal), luego calculamos lo que falta después de usar las grandes actuales que tenemos actualmente, Y al final, comprobamos si tenemos más o igual de cantidad de chocolates pequeños para cubrir lo restantes. Si es posible, se regresa la cantidad restante, sino se regresa un -1.
+
+---
 
 # Notas Martin:
 
