@@ -7,9 +7,12 @@
 
 #Function to coding bat
 def lucky_sum(a, b, c):
+    #Initialize x
     x=0
+    # if to know if the variable is integer
     if isinstance(a, int) and isinstance(b, int) and isinstance(c, int):
         lista=[a,b,c]
+        #for to go through the list
         for i in lista:
             if i!=13:
                 x=i+x
